@@ -11,8 +11,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     #Auth related urls
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', name='logout'),
+    url(r'^accounts/login/$', 'simplesite.views.login', name='login'),
+    url(r'^accounts/logout/$', 'simplesite.views.loggedin', name='logout'),
     url(r'^accounts/loggedin/$', 'simplesite.views.loggedin', name='loggedin'),
 
 )
